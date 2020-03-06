@@ -1,0 +1,24 @@
+" Vimrc configuration file
+runtime! debian.vim
+
+set encoding=utf-8
+set nocompatible
+filetype off
+
+" Vundle loading
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" Vundle plugins
+
+" Plugins configuration
+
+" End Vendle section
+call vundle#end()
+filetype plugin indent on
+
+" Editor configuration
+
+if filereadable("/etc/vim/vimrc.local")
+  source /etc/vim/vimrc.local
+endif

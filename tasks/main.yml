@@ -1,0 +1,13 @@
+---
+
+- name: "Overriding current vim configuration"
+  include: override_vimrc.yml
+  when: override_vimrc
+
+- name: "Filling the vim configuration"
+  include: fill_vimrc.yml
+  when: not override_vimrc
+
+- name: "Installing vundle plugins"
+  shell: vim +PluginInstall +qall
+  ignore_errors: true

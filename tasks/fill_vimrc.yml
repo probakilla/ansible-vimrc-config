@@ -1,0 +1,22 @@
+---
+
+- name: "Adding vim plugins to {{ file_path }}"
+  blockinfile:
+    path: "{{ file_path }}"
+    insertafter: "^\" Vundle plugins$"
+    marker: "\" ANSIBLE - VIM PLUGINS LIST {mark}"
+    block: "{{ vim_plugins }}"
+
+- name: "Adding plugin configuration to {{ file_path }}"
+  blockinfile:
+    path: "{{ file_path }}"
+    insertafter: "^\" Plugins configuration$"
+    marker: "\" ANSIBLE - PLUGIN CONFIGURATION {mark}"
+    block:  "{{ plugin_config }}"
+
+- name: "Adding editor configuration to {{ file_path }}"
+  blockinfile:
+    path: "{{ file_path }}"
+    insertafter: "^\" Editor configuration$"
+    marker: "\" ANSIBLE - EDITOR CONFIGURATION {mark}"
+    block: "{{ editor_config }}"

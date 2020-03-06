@@ -1,0 +1,9 @@
+---
+
+- name: "Installing vimrc template"
+  template:
+    src: vimrc.j2
+    dest: "{{ file_path }}"
+    follow: yes
+
+- include: fill_vimrc.yml
