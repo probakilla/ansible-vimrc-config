@@ -11,3 +11,9 @@
 - name: "Installing vundle plugins"
   shell: vim +PluginInstall +qall
   ignore_errors: true
+
+- name: "Compiling the You Complete Me plugin"
+  script: ~/.vim/bundle/YouCompleteMe/install.py
+  args:
+    removes: ~/.vim/bundle/YouCompleteMe/install.py
+    executable: python3
