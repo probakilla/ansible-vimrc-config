@@ -12,7 +12,7 @@
   shell: vim +PluginInstall +qall
   args:
     executable: /bin/bash
-    changes: $HOME/.vim/bundle/Vundle.vim
+    removes: $HOME/.vim/bundle/Vundle.vim
   ignore_errors: true
 
 - name: "Compiling the You Complete Me plugin"
