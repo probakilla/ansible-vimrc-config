@@ -9,7 +9,7 @@
   when: not override_vimrc
 
 - name: "Installing vundle plugins"
-  shell: vim +PluginInstall +qall
+  command: vim +PluginInstall +qall
   args:
     removes: $HOME/.vim/bundle/Vundle.vim
     executable: /bin/bash    
