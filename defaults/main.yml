@@ -55,7 +55,7 @@ editor_config: |
   highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
 
   " Show Whitespaces
-  set listchars=tab:\ \ ,trail:~,extends:>,precedes:<,nbsp:+,space:·
+  set listchars=tab:\ \ ,trail:~,extends:>,precedes:<,nbsp:+
   set list
 
   " Tab = 4 spaces
